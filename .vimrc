@@ -56,10 +56,14 @@ let g:airline#extensions#tabline#enabled = 1 "Always show smarter tab line
 let g:airline_powerline_fonts = 1            "Nice looking symbols in status bar
 "}}}
 
-"{{{ Color setting for Coc.nvim and vim itself
+"{{{ Visual setting for Coc.nvim and vim itself
 highlight Pmenu ctermbg=White
-highlight CocErrorHighlight cterm=underline,bold ctermfg=DarkRed
 highlight Comment ctermfg=DarkGray
+
+" These two line below are required to display undercurl.
+let &t_Cs = "\e[4:3m"
+let &t_Ce = "\e[4:0m"
+highlight CocErrorHighlight cterm=undercurl,bold ctermfg=DarkRed
 "}}}
 
 "{{{ Remap <C-f> and <C-b> for scroll float windows/popups for Coc.nvim
