@@ -204,3 +204,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Change less's highlight color on the search pattern
 export LESS_TERMCAP_so=$'\E[30;43m'
+
+# PATH
+export PATH="~/.local/bin/:$PATH"
