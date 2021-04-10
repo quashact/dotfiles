@@ -60,7 +60,7 @@ let g:airline_powerline_fonts = 1            "Nice looking symbols in status bar
 highlight Pmenu ctermbg=White
 highlight Comment ctermfg=DarkGray
 
-" These two line below are required to display undercurl.
+" These two lines below are required to display undercurl.
 let &t_Cs = "\e[4:3m"
 let &t_Ce = "\e[4:0m"
 highlight CocErrorHighlight cterm=undercurl,bold ctermfg=DarkRed
