@@ -24,11 +24,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'badacadabra/vim-archery'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 "}}}
 
@@ -39,6 +41,8 @@ set tabstop=4      " Appear tab character as 4 spaces wide
 set shiftwidth=4   " Correspond an Indent as a single tab
 set expandtab      " Make the tab key insert spaces instead of tab character.
 set hlsearch       " Highlight searched keyword permanently.
+set encoding=UTF-8 " Set encoding as UTF-8
+colorscheme archery
 "}}}
 
 "{{{ Personal setting for vim-gitgutter 
@@ -52,14 +56,12 @@ highlight GitGutterChangeDelete ctermfg=yellow
 "}}}
 
 "{{{ Personal setting for vim-alirline
+let g:airline_theme='cool'
 let g:airline#extensions#tabline#enabled = 1 "Always show smarter tab line
 let g:airline_powerline_fonts = 1            "Nice looking symbols in status bar
 "}}}
 
 "{{{ Visual setting for Coc.nvim and vim itself
-highlight Pmenu ctermbg=White
-highlight Comment ctermfg=DarkGray
-
 " These two lines below are required to display undercurl.
 let &t_Cs = "\e[4:3m"
 let &t_Ce = "\e[4:0m"
