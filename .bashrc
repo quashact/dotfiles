@@ -194,6 +194,8 @@ source "$BASH_IT"/bash_it.sh
 
 # {{{ Personal configruation
 [[ $- == *i* ]] && tabs -4 # On interactive shell, show each tab as 4 spaces wide.
+export LESS_TERMCAP_so=$'\E[30;43m' # Change less's highlight color on the search pattern
+POWERLINE_PROMPT="user_info scm python_venv ruby node wd" # Setting for powerline
 # }}}
 
 # {{{ NVM initialization script
@@ -201,6 +203,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # }}}
-
-# Change less's highlight color on the search pattern
-export LESS_TERMCAP_so=$'\E[30;43m'
