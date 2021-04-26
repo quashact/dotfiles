@@ -34,6 +34,11 @@ Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
+Plug 'junegunn/vim-peekaboo'
+Plug 'preservim/nerdtree'
+Plug 'preservim/tagbar'
+Plug 'romainl/vim-cool'
+Plug 'simeji/winresizer'
 call plug#end()
 "}}}
 
@@ -99,3 +104,21 @@ endif
 " Select the first completion item and confirm the completion when no item has
 " been selected for Coc.nvim
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+
+" Remap for NERDTree
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+" Automatically open NERDTree
+autocmd VimEnter * NERDTree
+
+" Configuration for winresizer
+let g:winresizer_start_key = '<C-N>' " Start window resize mode by `Ctrl+N`
+let g:winresizer_vert_resize = 3     " Change width of window size when left or right key is pressed
+
+" Show number of matches in the command-line for vim-cool
+let g:CoolTotalMatches = 1
+
+" Keymap for Tagbar
+nmap <c-b> :TagbarToggle<CR>
+" Automatically open Tagbar
+autocmd VimEnter * nested :call tagbar#autoopen(1)
