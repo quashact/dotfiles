@@ -27,6 +27,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'badacadabra/vim-archery'
 Plug 'arcticicestudio/nord-vim'
 Plug 'cocopon/iceberg.vim'
+Plug 'joshdick/onedark.vim'
 Plug 'cocopon/inspecthi.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
@@ -50,17 +51,10 @@ set shiftwidth=4   " Correspond an Indent as a single tab
 set expandtab      " Make the tab key insert spaces instead of tab character.
 set hlsearch       " Highlight searched keyword permanently.
 set encoding=UTF-8 " Set encoding as UTF-8
-colorscheme iceberg
-"}}}
-
-"{{{ Personal setting for vim-gitgutter 
-set updatetime=150
+colorscheme onedark "colorschemes(iceberg nord onedark)
 set background=dark
-highlight clear SignColumn
-highlight GitGutterAdd ctermfg=green
-highlight GitGutterChange ctermfg=yellow
-highlight GitGutterDelete ctermfg=red
-highlight GitGutterChangeDelete ctermfg=yellow
+set termguicolors
+set updatetime=150
 "}}}
 
 "{{{ Personal setting for vim-alirline
